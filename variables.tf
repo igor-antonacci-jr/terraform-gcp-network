@@ -2,7 +2,7 @@
 variable "cluster_name" {}
 
 # Master CIDR Range 
-variable "master_ip_cidr_range" {}
+variable "master_cidr_range" {}
 
 # Network Name
 variable "gcp_region" {}
