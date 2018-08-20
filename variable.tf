@@ -1,5 +1,8 @@
+# project id
+variable "project_id" {}
+
 # Cluster Name
-variable "cluster_name" {}
+variable "name_prefix" {}
 
 # Master CIDR Range 
 variable "master_cidr_range" {}
