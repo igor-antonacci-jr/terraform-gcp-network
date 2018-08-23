@@ -8,7 +8,7 @@ variable "name_prefix" {}
 variable "master_cidr_range" {}
 
 # Network Name
-variable "gcp_region" {}
+variable "region" {}
 
 # Agent CIDR Range
 variable "agent_cidr_range" {}

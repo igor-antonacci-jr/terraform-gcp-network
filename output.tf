@@ -9,8 +9,8 @@ output "master_cidr_range" {
 }
 
 # GCP Region
-output "gcp_region" {
-  value = "${var.gcp_region}"
+output "region" {
+  value = "${var.region}"
 }
 
 # Agent CIDR Range

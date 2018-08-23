@@ -10,14 +10,14 @@ resource "google_compute_subnetwork" "master-subnet" {
   name          = "${var.name_prefix}-master-subnet"
   ip_cidr_range = "${var.master_cidr_range}"
   network       = "${google_compute_network.network.self_link}"
-  region        = "${var.gcp_region}"
+  region        = "${var.region}"
 }
 
 resource "google_compute_subnetwork" "agent-subnet" {
   name          = "${var.name_prefix}-agent-subnet"
   ip_cidr_range = "${var.agent_cidr_range}"
   network       = "${google_compute_network.network.self_link}"
-  region        = "${var.gcp_region}"
+  region        = "${var.region}"
 }
 
 resource "google_compute_firewall" "internal-any-any" {
