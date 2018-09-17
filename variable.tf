@@ -1,5 +1,3 @@
-# project id
-variable "project_id" {}
 
 # Cluster Name
 variable "name_prefix" {}
