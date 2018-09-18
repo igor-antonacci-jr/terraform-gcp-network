@@ -1,4 +1,3 @@
-
 # Cluster Name
 variable "name_prefix" {}
 
