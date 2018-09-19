@@ -27,3 +27,8 @@ output "master_subnetwork_name" {
 output "agent_subnetwork_name" {
   value = "${google_compute_subnetwork.agent-subnet.name}"
 }
+
+# Admin CIDR
+output "admin_cidr" {
+  value = "${var.admin_cidr}"
+}
