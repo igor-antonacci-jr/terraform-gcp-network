@@ -32,3 +32,8 @@ output "agent_subnetwork_name" {
 output "admin_cidr" {
   value = "${var.admin_cidr}"
 }
+
+output "network_name" {
+  description = "Name of the network created by this module"
+  value       = "${google_compute_network.network.name}"
+}
