@@ -16,5 +16,4 @@ resource "google_compute_subnetwork" "agent-subnet" {
   name          = "${var.name_prefix}-agent-subnet"
   ip_cidr_range = "${var.agent_cidr_range}"
   network       = "${google_compute_network.network.self_link}"
-  region        = "${var.region}"
 }
