@@ -11,4 +11,6 @@ variable "region" {}
 variable "agent_cidr_range" {}
 
 # Admin CIDR
-variable "admin_cidr" {}
+variable "admin_cidr" {
+  default = "0.0.0.0/0"
+}

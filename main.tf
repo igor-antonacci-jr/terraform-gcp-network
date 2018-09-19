@@ -8,13 +8,10 @@ module "master-frontend-compute-firewall" {
     google = "google"
   }
 
-  name_prefix         = "${var.name_prefix}"
-  network             = "${data.google_compute_subnetwork.a.network}"
-  instances_self_link = "${module.dcos-master-instances.instances_self_link}"
-  admin_cidr          = "${var.admin_cidr}"
-  dcos_role           = "master"
+  name_prefix = "${var.name_prefix}"
+  network     = "${google_compute_network.network.name}"
+  admin_cidr  = "${var.admin_cidr}"
 }
-
 
 resource "google_compute_network" "network" {
   name                    = "${var.name_prefix}-network"
