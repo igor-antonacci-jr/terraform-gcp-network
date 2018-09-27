@@ -1,3 +1,10 @@
+/**
+ * [![Build Status](https://jenkins-terraform.mesosphere.com/service/dcos-terraform-jenkins/job/dcos-terraform/job/terraform-gcp-network/job/master/badge/icon)](https://jenkins-terraform.mesosphere.com/service/dcos-terraform-jenkins/job/dcos-terraform/job/terraform-gcp-network/job/master/)
+ * #  terraform-gcp-network
+ *
+ * Creates a DC/OS network for GCP for Masters and Agents
+ */
+
 provider "google" {}
 
 resource "google_compute_network" "network" {
