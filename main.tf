@@ -3,6 +3,18 @@
  * #  terraform-gcp-network
  *
  * Creates a DC/OS network for GCP for Masters and Agents
+ *
+ * ## EXAMPLE
+ *
+ * ```hcl
+ * module "dcos-vpc" {
+ *   source  = "dcos-terraform/network/gcp"
+ *   version = "~> 0.1"
+ *
+ *   agent_cidr_range = "10.65.0.0/16"
+ *   master_cidr_range = "10.64.0.0/16"
+ * }
+ * ```
  */
 
 provider "google" {}
