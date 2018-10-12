@@ -3,7 +3,6 @@
 
 Creates a DC/OS network for GCP for Masters and Agents
 
-
 ## EXAMPLE
 
 ```hcl
@@ -16,13 +15,14 @@ module "dcos-vpc" {
 }
 ```
 
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | agent_cidr_range | agent cidr range | string | - | yes |
+| cluster_name | Cluster Name | string | - | yes |
 | master_cidr_range | master cidr range | string | - | yes |
-| name_prefix | Cluster Name | string | - | yes |
 
 ## Outputs
 
