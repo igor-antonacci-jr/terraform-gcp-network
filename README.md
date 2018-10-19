@@ -20,9 +20,9 @@ module "dcos-vpc" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| agent_cidr_range | agent cidr range | string | - | yes |
-| cluster_name | Cluster Name | string | - | yes |
-| master_cidr_range | master cidr range | string | - | yes |
+| agent_cidr_range | Agent CIDR Range | string | - | yes |
+| cluster_name | Name of the DC/OS cluster | string | - | yes |
+| master_cidr_range | Master CIDR Range | string | - | yes |
 
 ## Outputs
 
