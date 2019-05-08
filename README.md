@@ -15,23 +15,22 @@ module "dcos-vpc" {
 }
 ```
 
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| agent_cidr_range | Agent CIDR Range | string | - | yes |
-| cluster_name | Name of the DC/OS cluster | string | - | yes |
-| master_cidr_range | Master CIDR Range | string | - | yes |
+| agent\_cidr\_range | Agent CIDR Range | string | n/a | yes |
+| cluster\_name | Name of the DC/OS cluster | string | n/a | yes |
+| master\_cidr\_range | Master CIDR Range | string | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| agent_subnetwork_name | Agent Subnetwork Name |
-| master_cidr_range | Master CIDR Range |
-| master_subnetwork_name | Master Subnetwork Name |
-| name_prefix | Cluster Name |
-| network_name | Name of the network created by this module |
-| self_link | Self link of the network created by this module |
+| agent\_subnetwork\_name | Agent Subnetwork Name |
+| master\_cidr\_range | Master CIDR Range |
+| master\_subnetwork\_name | Master Subnetwork Name |
+| name\_prefix | Cluster Name |
+| network\_name | Name of the network created by this module |
+| self\_link | Self link of the network created by this module |
 
