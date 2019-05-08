@@ -30,7 +30,7 @@ module "dcos-vpc" {
 | agent\_subnetwork\_name | Agent Subnetwork Name |
 | master\_cidr\_range | Master CIDR Range |
 | master\_subnetwork\_name | Master Subnetwork Name |
-| name\_prefix | Cluster Name |
+| name\_prefix | Name Prefix |
 | network\_name | Name of the network created by this module |
 | self\_link | Self link of the network created by this module |
 
