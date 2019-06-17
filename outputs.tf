@@ -10,7 +10,7 @@ output "master_cidr_range" {
 
 output "master_subnetwork_name" {
   description = "Master Subnetwork Name"
-  value       = "${google_compute_subnetwork.master-subnet.name}"
+  value       = "${join("", google_compute_subnetwork.master-subnet.*.name)}"
 }
 
 output "agent_subnetwork_name" {
