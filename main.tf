@@ -19,20 +19,24 @@
 
 provider "google" {}
 
+locals {
+  cluster_name = "${var.name_prefix != "" ? "${var.name_prefix}-${var.cluster_name}" : var.cluster_name}"
+}
+
 resource "google_compute_network" "network" {
-  name                    = "${var.cluster_name}-network"
+  name                    = "${local.cluster_name}-network"
   auto_create_subnetworks = "false"
 }
 
 ## Two subnetworks (masters, agents)
 resource "google_compute_subnetwork" "master-subnet" {
-  name          = "${var.cluster_name}-master-subnet"
+  name          = "${local.cluster_name}-master-subnet"
   ip_cidr_range = "${var.master_cidr_range}"
   network       = "${google_compute_network.network.self_link}"
 }
 
 resource "google_compute_subnetwork" "agent-subnet" {
-  name          = "${var.cluster_name}-agent-subnet"
+  name          = "${local.cluster_name}-agent-subnet"
   ip_cidr_range = "${var.agent_cidr_range}"
   network       = "${google_compute_network.network.self_link}"
 }
