@@ -30,6 +30,7 @@ resource "google_compute_network" "network" {
 
 ## Two subnetworks (masters, agents)
 resource "google_compute_subnetwork" "master-subnet" {
+  count         = "${var.disable_master_subnet ? 0 : 1}"
   name          = "${local.cluster_name}-master-subnet"
   ip_cidr_range = "${var.master_cidr_range}"
   network       = "${google_compute_network.network.self_link}"

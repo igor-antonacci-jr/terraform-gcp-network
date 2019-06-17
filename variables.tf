@@ -14,3 +14,8 @@ variable "name_prefix" {
   description = "Name Prefix"
   default     = ""
 }
+
+variable "disable_master_subnet" {
+  description = "Do not create the master subnet"
+  default     = false
+}
