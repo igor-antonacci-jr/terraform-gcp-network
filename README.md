@@ -22,15 +22,17 @@ module "dcos-vpc" {
 | agent\_cidr\_range | Agent CIDR Range | string | n/a | yes |
 | cluster\_name | Name of the DC/OS cluster | string | n/a | yes |
 | master\_cidr\_range | Master CIDR Range | string | n/a | yes |
+| disable\_master\_subnet | Do not create the master subnet | string | `"false"` | no |
+| name\_prefix | Name Prefix | string | `""` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | agent\_subnetwork\_name | Agent Subnetwork Name |
+| cluster\_name | Name of the DC/OS cluster |
 | master\_cidr\_range | Master CIDR Range |
 | master\_subnetwork\_name | Master Subnetwork Name |
-| name\_prefix | Name Prefix |
 | network\_name | Name of the network created by this module |
 | self\_link | Self link of the network created by this module |
 

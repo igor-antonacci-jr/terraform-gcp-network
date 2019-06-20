@@ -1,5 +1,5 @@
 output "cluster_name" {
-  description = "Cluster Name"
+  description = "Name of the DC/OS cluster"
   value       = "${local.cluster_name}"
 }
 
