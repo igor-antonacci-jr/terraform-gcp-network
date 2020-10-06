@@ -39,12 +39,12 @@ resource "google_compute_subnetwork" "master-subnet" {
   #name          = "${local.cluster_name}-master-subnet"
   name          = "${local.cluster_name}-master-network"
   ip_cidr_range = "${var.master_cidr_range}"
-  network       = "${google_compute_network.network.self_link}"
+  network       = "${data.google_compute_network.network.self_link}"
 }
 
 resource "google_compute_subnetwork" "agent-subnet" {
   #name          = "${local.cluster_name}-agent-subnet"
   name          = "${local.cluster_name}-agent-network"
   ip_cidr_range = "${var.agent_cidr_range}"
-  network       = "${google_compute_network.network.self_link}"
+  network       = "${data.google_compute_network.network.self_link}"
 }
