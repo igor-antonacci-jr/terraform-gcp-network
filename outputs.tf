@@ -20,10 +20,10 @@ output "agent_subnetwork_name" {
 
 output "network_name" {
   description = "Name of the network created by this module"
-  value       = "${google_compute_network.network.name}"
+  value       = "${data.google_compute_network.network.name}"
 }
 
 output "self_link" {
   description = "Self link of the network created by this module"
-  value       = "${google_compute_network.network.self_link}"
+  value       = "${data.google_compute_network.network.self_link}"
 }
