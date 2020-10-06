@@ -29,7 +29,7 @@ locals {
 } */
 
 data "google_compute_network" "network" {
-  name                    = "${var.cluster_network_name != "" ? var.cluster_network_name : "${local.cluster_name}-network" }"
+  name                    = "${var.cluster_network_name != "" ? "${var.cluster_network_name}" : "${local.cluster_name}-network" }"
   #auto_create_subnetworks = "false"
 }
 
