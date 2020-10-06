@@ -19,3 +19,7 @@ variable "disable_master_subnet" {
   description = "Do not create the master subnet"
   default     = false
 }
+
+variable "cluster_network_name" {
+  description = "Name of the main network"
+}
